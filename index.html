@@ -16,34 +16,57 @@
     <meta name="keywords" content="ga, IT관련블로그, 경영정보">
     <meta name="author" content="Kim Jonghyun">
     <title>welcome to jonghyun's site</title>
+    <script src="https://kit.fontawesome.com/a5697d9baf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
+<style>
+    section{
+            display: flex;
+        }
+        .content{
+            flex: 4;
+        }
+        aside{
+            flex: 1;
+        }
+</style>
 <body>
-    <header>
-        <img src="./images/logo.jpg" alt="CI">
+
+    
+    <header id="home">
+        <i class="fa-solid fa-burger"></i>
         <h1>Jonghyun Site</h1>
+        
+        
     </header>
+    
     <nav>
         <!--ul>li*4{메인메뉴$$}-->
+        
         <ul>
-            <li>소개</li>
-            <li>쇼핑</li>
-            <li>패키지</li>
-            <li>커뮤니티</li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">쇼핑</a></li>
+            <li><a href="#">패키지</a></li>
+            <li><a href="#">커뮤니티</a></li>
         </ul>
+       
 
         <!-- ol>li*3{연습$}-->
         <!--ol은 type="none" 설정 안먹힘 ul은 됨-->
        
     </nav>
-    <section>
+    
+        <section> 
+    <div class="content">
         <artickle>
             <div class="bigdata">
-                <img src="./images/bigdata.jpg" alt="메인이미지" width="50%">
+                <img src="./images/bigdata.jpg" class="w3-circle" alt="메인이미지" width="50%">
             </div>
             <div class="action">
                 <h2>나의 대외활동 이력</h2>
                 <!--table>tr>th*3^tr*3>td*3-->
-                <table border="1">
+                <table class="w3-table-all">
                     <tr>
                         <th>기간</th>
                         <th>대외활동내용</th>
@@ -76,7 +99,7 @@
                 <h2>좋아하는 음악</h2>
                 <audio src="./media/music01.mp3" controls></audio>
                 <h2>북극곰 환경을 살리자</h2>
-                <video src="./media/movie.mp4" controls width="50%"></video>
+                <video src="./media/movie.mp4"  controls width="50%"></video>
                 <h2>손흥민 활약상</h2>
                 <iframe width="700" height="500" src="https://www.youtube.com/embed/Zzf-F4yu-gw" title="[골장면분석] 손흥민의 해트트릭! 첫 골부터 지렸던 이유!! (토트넘 vs 레스터)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -87,15 +110,37 @@
             <!-- 넓이 높이 설정후 갤러리html iframe -->
         </div>
         </artickle>
-
+    
+    </div>
         <aside>
             <div class="link">
-               <a href="http://mis.deu.ac.kr">경영정보학과 사이트</a><br>
+               <a href="http://mis.deu.ac.kr" target="_blank">경영정보학과 사이트</a><br>
                <a href="./gallery.html">갤러리</a><br>
-               <a href=""></a>
+               <a href="#home">시작이동</a>
+            </div>
+
+            <div class="login">
+                <h2> 로그인 </h2>
+                <form action="#" method="get">
+                    회원ID <input type="text" class="w3-input" name="id" id=""> <br>
+                    비밀번호 <input type="password" class="w3-input" name="pw" id=""> <br>
+                    남자 <input type="radio" class="w3-check" type="checkbox" checked="checked" name="gender" value="1" id="">
+                    여자 <input type="radio" class="w3-check" type="checkbox" checked="checked" name="gender" value="2" id="">
+                    <br>
+                
+                    <input type="submit" class="w3-button w3-red" value="로그인">
+                    <input type="reset" class="w3-button w3-red" value="재설정"><br>
+                </form>
             </div>
         </aside>
+    
     </section>
-    <footer> 저작권과 주소</footer>
+    <footer> 저작권과 주소
+        <div class="sns">
+            <a href="https://ko-kr.facebook.com/">
+            <i class="fa-brands fa-facebook"></i></a>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </footer>
 </body>
 </html>
